@@ -28,5 +28,13 @@ public class Question5
      
     Scanner in = new Scanner(System.in);
     
+    int i = in.nextInt();
+
+    
+
+    for(i=0; i<n; i++) {
+      int n = in.nextInt();
+    }
+
   }
 }
