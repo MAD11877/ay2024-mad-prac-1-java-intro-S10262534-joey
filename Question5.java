@@ -27,14 +27,34 @@ public class Question5
      */
      
     Scanner in = new Scanner(System.in);
-    
-    int i = in.nextInt();
+    int n = in.nextInt();
 
-    
+    List<Integer> intList = new ArrayList<>();
+    List<Integer> counter = new ArrayList<>();
 
     for(i=0; i<n; i++) {
-      int n = in.nextInt();
+      int input = in.nextInt();
+      if (!intList.contains(input)) {
+        
+        intList.add(input);
+        counter.add(1);
+      } else {
+        
+        int counterIndex = intList.indexOf(input);
+        counter.set(counterIndex, counter.get(counterIndex)+1);
+      }
     }
 
+    int max = counter.get(0);
+    int index = 0;
+
+    for(int i=1;i<counter.size();i++) {
+      if (counter.get(i) > max) {
+        max = counter.get(i);
+        index = i;
+      }
+    }
+
+    System.out.println(intList.get(index));
   }
 }
