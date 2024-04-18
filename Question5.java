@@ -32,7 +32,7 @@ public class Question5
     List<Integer> intList = new ArrayList<>();
     List<Integer> counter = new ArrayList<>();
 
-    for(i=0; i<n; i++) {
+    for(i=0;i<n;i++) {
       int input = in.nextInt();
       if (!intList.contains(input)) {
         
