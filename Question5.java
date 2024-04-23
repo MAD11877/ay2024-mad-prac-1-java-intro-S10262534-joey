@@ -32,19 +32,18 @@ public class Question5
     List<Integer> intList = new ArrayList<>();
     List<Integer> counter = new ArrayList<>();
 
-    for(i=0;i<n;i++) {
+    for(int i=0;i<n;i++) {
       int input = in.nextInt();
+      
       if (!intList.contains(input)) {
-        
         intList.add(input);
         counter.add(1);
       } else {
-        
         int counterIndex = intList.indexOf(input);
         counter.set(counterIndex, counter.get(counterIndex)+1);
       }
     }
-
+    
     int max = counter.get(0);
     int index = 0;
 
